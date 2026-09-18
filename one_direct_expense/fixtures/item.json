@@ -47,7 +47,7 @@
   "is_zero_rated": 0,
   "item_code": "Direct Purchase",
   "item_defaults": [],
-  "item_group": "Products",
+  "item_group": "All Item Groups",
   "item_name": "Direct Purchase",
   "last_purchase_rate": 0.0,
   "lead_time_days": 0,
