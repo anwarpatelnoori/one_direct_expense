@@ -43,7 +43,9 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Purchase Invoice": "one_direct_expense/overrides/purchase_invoice/custom_purchase_invoice.js"
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -124,14 +126,27 @@ app_license = "mit"
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
-
+fixtures = [
+    {
+        "dt": "Item",
+        "filters": [
+            ["name", "=", "Direct Purchase"]
+        ]
+    },
+    {
+        "dt":"Item Group",
+        "filters":[
+            ["name", "=", "Direct Purchase"]
+        ]
+    }
+]
 # DocType Class
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+    "Purchase Invoice": "one_direct_expense.one_direct_expense.overrides.purchase_invoice.custom_purchase_invoice.CustomPurchaseInvoice"
+}
 
 # Document Events
 # ---------------
